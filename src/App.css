@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* container-coustom */
+.container-coustom{
+  width: 1040px;
+  margin: auto;
+  margin-top: 105px;
+
+}
+
+.logo a{
+  font-size: 35px;
+  
+  font-weight: 900;
+  text-decoration: none;
+  color: #5d5fef;
+}
+
+i.icon {
+  font-size: 35px;
+  margin-right: 13px;
+  color: #5d5fef;
+}
+
+h2.main-title {
+  margin-top: 70px;
+  font-size: 34px;
+  margin-bottom: 55px;
+}
