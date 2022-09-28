@@ -1,10 +1,12 @@
 import logo from './logo.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Bangladash</h1>
+    <div>
+      <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
     </div>
   );
 }
