@@ -1,6 +1,7 @@
 import React from 'react';
 import './RightSide.css'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const addSecent = (e) =>{
@@ -24,6 +25,12 @@ const RightSide = ({exerciseTimeCount}) => {
     for (const singleCount of exerciseTimeCount) {
         total = total + singleCount
     }
+
+    const notify = () =>{
+        toast.success("Activity Completed successful",{
+        position:"top-center"
+    });
+    } 
 
     return (
         <div className='right-side' >
@@ -75,10 +82,10 @@ const RightSide = ({exerciseTimeCount}) => {
                     <h3 className='count-time' id='break-time-id'>20 </h3>
                 </div>
             </div>
-            <button type="button" className="btn btn-primary w-100 completed">Activity Completed</button>
+            <button onClick={notify} type="button" className="btn btn-primary w-100 completed">Activity Completed</button>
    
+            <ToastContainer />
         </div>
-    
 
     );
 };
