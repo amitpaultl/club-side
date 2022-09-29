@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import './RightSide.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 const addSecent = (e) =>{
@@ -9,14 +11,8 @@ const addSecent = (e) =>{
     const values = e.target.innerText
     setText.innerText = values + 'seconds';
     localStorage.setItem('time', values)
-        
-    
     
 }
-
-
-
-
 
 
 const RightSide = ({exerciseTimeCount}) => {
@@ -31,7 +27,13 @@ const RightSide = ({exerciseTimeCount}) => {
         position:"top-center"
     });
     } 
+    const [brackTime, setbrackTime] = useState([])
 
+    useEffect(()=>{
+        const getData = localStorage.getItem('time')
+        
+        setbrackTime(getData)
+    },[])
     return (
         <div className='right-side' >
             <div className="profile d-flex ">
@@ -79,7 +81,7 @@ const RightSide = ({exerciseTimeCount}) => {
             <div className="detalis-bg">
                 <div className="detalis d-flex justify-content-between">
                     <h3>Break time</h3>
-                    <h3 className='count-time' id='break-time-id'> </h3>
+                    <h3 className='count-time' id='break-time-id'> {brackTime + 'seconds'}</h3>
                 </div>
             </div>
             <button onClick={notify} type="button" className="btn btn-primary w-100 completed">Activity Completed</button>
