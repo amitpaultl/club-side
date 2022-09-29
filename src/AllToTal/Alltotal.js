@@ -14,6 +14,16 @@ const Alltotal = () => {
         .then(data => setExercise(data))
     },[])
 
+    const [exerciseTime, setexerciseTime] = useState([])
+    
+    const addSecend = (time)=>{
+        const old = [...exerciseTime, time]
+        setexerciseTime(old)
+        
+    }
+  
+    
+
     return (
         <div className='container-fluid'>
             <div className="row">
@@ -26,13 +36,13 @@ const Alltotal = () => {
                     <h2 className='main-title'>Select today’s exercise</h2>
                     <div className='card-style'>
                         {
-                            exercise.map(item => <Item card={item} key={item.id}></Item>)
+                            exercise.map(item => <Item secend={addSecend} card={item} key={item.id} ></Item>)
                         }
                     </div>
                 </div>
                 </div>
                 <div className="col-md-12 col-sm-12 col-lg-3">
-                        <RightSide></RightSide>
+                        <RightSide  exerciseTimeCount={exerciseTime}></RightSide>
                 </div>
             </div>
         </div>

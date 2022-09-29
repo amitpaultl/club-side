@@ -57,6 +57,9 @@ h3.break {
     border-radius: 10px;
 }
 
+h3.count-time{
+    font-weight: 300;
+}
 
 @media (min-width: 320px) and (max-width: 767.98px) { 
     .card img{

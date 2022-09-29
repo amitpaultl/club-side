@@ -1,12 +1,30 @@
 import React from 'react';
 import './RightSide.css'
 
+
+
 const addSecent = (e) =>{
-    const values = e.terget.inner.text
-    console.log(values);
+    const setText = document.getElementById('break-time-id');
+    const values = e.target.innerText
+    setText.innerText = values
+    localStorage.setItem('time', values)
+        
+    
+    
 }
 
-const RightSide = () => {
+
+
+
+
+
+const RightSide = ({exerciseTimeCount}) => {
+
+    let total = 0;
+    for (const singleCount of exerciseTimeCount) {
+        total = total + singleCount
+    }
+
     return (
         <div className='right-side' >
             <div className="profile d-flex ">
@@ -18,6 +36,7 @@ const RightSide = () => {
                     <p>Sydney, Australia</p>
                 </div>
             </div>
+
             <div className="Weights d-flex justify-content-between">
                 <div className="Weight">
                     <h3>75kg</h3>
@@ -32,29 +51,35 @@ const RightSide = () => {
                     <p>Age</p>
                 </div>
             </div>
+
             <h3 className='break'>Add A Break</h3>
             <div className="break-info d-flex justify-content-around ">
                 <button className='rounded-circle '><span onClick={addSecent}>20</span>s</button>
-                <button className='rounded-circle'><span>30</span>s</button>
-                <button className='rounded-circle'><span>40</span>s</button>
-                <button className='rounded-circle '><span>50</span>s</button>
+                <button className='rounded-circle'><span onClick={addSecent}>30</span>s</button>
+                <button className='rounded-circle'><span onClick={addSecent}>40</span>s</button>
+                <button className='rounded-circle '><span onClick={addSecent}>50</span>s</button>
             </div>
+
             <h3 className='break'>Exercise Details</h3>
+
             <div className="detalis-bg">
                 <div className="detalis d-flex justify-content-between">
                     <h3>Exercise time</h3>
-                    <h3>200 seconds</h3>
+                    <h3 className='count-time' id='exercise-time-id'>{total} seconds</h3>
                 </div>
             </div>
+
             <div className="detalis-bg">
                 <div className="detalis d-flex justify-content-between">
                     <h3>Break time</h3>
-                    <h3>20 seconds</h3>
+                    <h3 className='count-time' id='break-time-id'>20 </h3>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary w-100 completed">Activity Completed</button>
-
+            <button type="button" className="btn btn-primary w-100 completed">Activity Completed</button>
+   
         </div>
+    
+
     );
 };
 
