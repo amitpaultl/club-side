@@ -2,7 +2,6 @@ import React, { useEffect, useState }  from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee ,faDumbbell} from '@fortawesome/free-solid-svg-icons'
 import './Alltotal.css'
-import Main from '../componts/Main/Main';
 import Item from '../componts/Item/Item';
 import RightSide from '../componts/RightSide/RightSide';
 

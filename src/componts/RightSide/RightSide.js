@@ -61,10 +61,10 @@ const RightSide = ({exerciseTimeCount}) => {
 
             <h3 className='break'>Add A Break</h3>
             <div className="break-info d-flex justify-content-around ">
-                <button className='rounded-circle '><span onClick={addSecent}>20</span>s</button>
-                <button className='rounded-circle'><span onClick={addSecent}>30</span>s</button>
-                <button className='rounded-circle'><span onClick={addSecent}>40</span>s</button>
-                <button className='rounded-circle '><span onClick={addSecent}>50</span>s</button>
+                <button className='rounded-circle '><span onClick={addSecent}>20</span></button>
+                <button className='rounded-circle'><span onClick={addSecent}>30</span></button>
+                <button className='rounded-circle'><span onClick={addSecent}>40</span></button>
+                <button className='rounded-circle '><span onClick={addSecent}>50</span></button>
             </div>
 
             <h3 className='break'>Exercise Details</h3>
