@@ -63,10 +63,10 @@ const RightSide = ({exerciseTimeCount}) => {
 
             <h3 className='break'>Add A Break</h3>
             <div className="break-info d-flex justify-content-around ">
-                <button className='rounded-circle '><span onClick={addSecent}>20</span></button>
-                <button className='rounded-circle'><span onClick={addSecent}>30</span></button>
-                <button className='rounded-circle'><span onClick={addSecent}>40</span></button>
-                <button className='rounded-circle '><span onClick={addSecent}>50</span></button>
+                <button onClick={addSecent} className='rounded-circle '>20</button>
+                <button onClick={addSecent} className='rounded-circle'>30</button>
+                <button onClick={addSecent} className='rounded-circle'>40</button>
+                <button onClick={addSecent} className='rounded-circle '>50</button>
             </div>
 
             <h3 className='break'>Exercise Details</h3>
@@ -81,7 +81,7 @@ const RightSide = ({exerciseTimeCount}) => {
             <div className="detalis-bg">
                 <div className="detalis d-flex justify-content-between">
                     <h3>Break time</h3>
-                    <h3 className='count-time' id='break-time-id'> {brackTime + 'seconds'}</h3>
+                    <h3 className='count-time' id='break-time-id'> {brackTime ? brackTime + 'seconds': 0 + 'seconds'}</h3>
                 </div>
             </div>
             <button onClick={notify} type="button" className="btn btn-primary w-100 completed">Activity Completed</button>
