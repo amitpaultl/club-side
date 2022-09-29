@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const addSecent = (e) =>{
     const setText = document.getElementById('break-time-id');
     const values = e.target.innerText
-    setText.innerText = values
+    setText.innerText = values + 'seconds';
     localStorage.setItem('time', values)
         
     
@@ -79,7 +79,7 @@ const RightSide = ({exerciseTimeCount}) => {
             <div className="detalis-bg">
                 <div className="detalis d-flex justify-content-between">
                     <h3>Break time</h3>
-                    <h3 className='count-time' id='break-time-id'>20 </h3>
+                    <h3 className='count-time' id='break-time-id'> </h3>
                 </div>
             </div>
             <button onClick={notify} type="button" className="btn btn-primary w-100 completed">Activity Completed</button>

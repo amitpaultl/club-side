@@ -1,6 +1,8 @@
 .right-side{
     background-color: #fff;
     padding: 55px 30px;
+    position: sticky;
+    top: 0;
 }
 .img-profile {
     width: 50px;

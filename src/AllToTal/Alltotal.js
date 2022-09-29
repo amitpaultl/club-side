@@ -27,7 +27,7 @@ const Alltotal = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <div className="col-md-12 col-sm-12 col-lg-9">
+                <div className="col-md-12 col-sm-12 col-lg-8 col-xl-9">
                 <div className="container-coustom">
                     <div className="logo">
                     <i className='icon'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></i><a href="">Miss Bangla Ulra</a>
@@ -38,10 +38,14 @@ const Alltotal = () => {
                         {
                             exercise.map(item => <Item secend={addSecend} card={item} key={item.id} ></Item>)
                         }
+                        
+                    </div>
+                    <div className="question-add">
+                            
                     </div>
                 </div>
                 </div>
-                <div className="col-md-12 col-sm-12 col-lg-3">
+                <div className="col-md-12 col-sm-12 col-lg-4 col-xl-3">
                         <RightSide  exerciseTimeCount={exerciseTime}></RightSide>
                 </div>
             </div>
