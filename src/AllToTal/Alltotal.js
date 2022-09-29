@@ -5,13 +5,14 @@ import './Alltotal.css'
 import Item from '../componts/Item/Item';
 import RightSide from '../componts/RightSide/RightSide';
 
-const Alltotal = () => {
+    const Alltotal = () => {
     const [exercise, setExercise] = useState([])
     useEffect(()=>{
         fetch('lodeData.json')
         .then(res => res.json())
         .then(data => setExercise(data))
     },[])
+    
 
     const [exerciseTime, setexerciseTime] = useState([])
     
@@ -55,10 +56,10 @@ const Alltotal = () => {
 
                             The following is a breakdown of the HTML tags above:
 
-                            MyCounter> represents a variable called count whose value is a numeric expression.
+                            MyCounter represents a variable called count whose value is a numeric expression.
                             GameScores is an object literal that has two prop-value pairs.
-                            DashboardUnit> is the XML block that is rendered on the page.
-                            scores={"GameScores"} is the scores attribute. It gets its value from the GameScores object literal defined earlier.
+                            DashboardUnit is the XML block that is rendered on the page.
+                            scores= is the scores attribute. It gets its value from the GameScores object literal defined earlier.
                             A React app usually has a single root DOM node. Rendering an element into the DOM will change the user interface of the page.
 
                             For instance, the following code displays “Hello World” on the page by rendering the element into a DOM node called root.
