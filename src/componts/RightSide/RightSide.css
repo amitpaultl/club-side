@@ -1,0 +1,66 @@
+.right-side{
+    background-color: #fff;
+    padding: 55px 30px;
+}
+.img-profile {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card img {height: 165px;}
+
+.Weights {
+    background: #f2f4fa;
+    padding: 12px 21px;
+    border-radius: 15px;
+    margin-top: 24px;
+}
+
+.Weights h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0;
+}
+
+h3.break {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 35px 0;
+}
+
+.break-info {
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+    background: #f2f4fa;
+}
+
+.break-info button {
+    background: #fff;
+}
+
+.break-info button:hover{
+    background-color: #5d5fef;
+    color: #fff;
+}
+
+.detalis h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detalis {
+    background: #f2f4fa;
+    padding: 11px 13px;
+    margin: 26px 0;
+    border-radius: 10px;
+}
+
+
+@media (min-width: 320px) and (max-width: 767.98px) { 
+    .card img{
+        height:auto;
+    
+  }
+  }
